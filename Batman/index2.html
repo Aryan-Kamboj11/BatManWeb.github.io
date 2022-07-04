@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BATMAN</title>
+    <link rel="icon" href="../Images/Batman-new-Logo2-removebg-preview.png">
+    <link rel="stylesheet" href="../srylesheet/globalstyle.css">
+    <link rel="stylesheet" href="../srylesheet/localstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../srylesheet/indexstyle.css">
+    <script>
+        var loader={
+        initialize: function(){
+          var html= 
+          '<div class=load-overlay id=Overlay>'
+               +'<div class=preloader id=preload>'+
+                   '<img src=../Images/Batman-new-Logo2-removebg-preview.png alt= style=filter: invert(100%);>'+
+                 '</div>'+
+               '</div>'
+               $('body').append(html);
+         },
+         showLoader:function(){
+           $('#Overlay').show();
+           $('#preload').show();
+         },
+         hideLoader:function(){
+           $('#Overlay').hide();
+           $('#preload').hide();
+         }
+       }
+       $(function(){
+         loader.initialize();
+         $('.load-screen').on('click',function(){
+           loader.showLoader();
+           setInterval(function(){
+             loader.hideLoader();
+           },3000);
+         })
+       })  
+       </script>
+</head>
+<body>
+    <div class="navbar-container">
+        <img src="../Images/Batman-new-Logo2-removebg-preview.png" alt="">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#" class="load-screen active">home</a></li>
+                <li><a href="image-gallery2.html" class="load-screen">image gallery</a></li>
+                <li><a href="video-gallery2.html" class="load-screen">video gallery</a></li>
+                <li><a href="Bat_bio.html" class="load-screen">bio</a></li>
+                <li><a href="quiz.html" class="load-screen">quiz game</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-image">
+      <img src="../Images/DC-Images/Batman-PNG-Image.png" alt="" width="1500px">
+    </div>
+    <div class="character-container">
+      <div class="character-info">
+        <h3>Character Facts</h3>
+        <h1>Batman</h1>
+        <div class="facts">
+          <p>Power: Exceptional Martial Arts,Combat Strategy,<br> Inexhaustible wealth,birilliant detective skill,advance technology</p>
+          <p>Occupation: CEO of wayne enterprise</p>
+          <p>Alias/Aka: dark knight, cape crusader</p>
+          <p>first appearance: Detective comics #27(1939)</p>
+          <p>real name: Bruce wayne</p>
+        </div>
+        <a href="Bat_bio.html">Learn More</a>
+      </div>
+    </div>
+    <div class="bat-mobile">      
+    </div>
+    <div class="specs">
+     
+      <div class="bat-mobile-para">
+        <h3>Specifications</h3>
+        <h1>Batmobile</h1>
+        <ul>
+          <li>Length: 45ft</li>
+          <li>Width: 2.8448 m broad</li>
+          <li>Accelration: 0-60 mph in 5.3s. Under full accelration, the car could actually rise up on its fronts "legs" while the front wheels stayed planted on the fround creating an effect like a giant spider</li>
+          <li>
+            Maximum Speed: 266 mph @ 425.6 km/h >> airborne @ 220 mph batman batmobile car
+          </li>
+          <li>
+            Engine: 350-cubic-inch chevy engine capable of 500 horsepower. 340-horsepower General Motors V8 engine.The jet engine and vector controls could jump up to 6 feet and 40 feet horizontally.
+          </li>
+          <li>Fuel: The "jet engine" on the back of the car was fed by propane tanks</li>
+          <li>
+            Tires: "Super Swamper" tires by TSL standing 37 inches tall(via titanium axles).
+          </li>
+        </ul>
+      </div>
+      <div class="bat-mobile-image">
+        <img src="../Images/DC-Images/homepage/batman-batmobile-img-2.jpg" alt="" >
+      </div>
+    </div>
+    
+    <div class="foot">
+      <img src="../Images/DC-Images/batman_char.png" alt="">
+      <footer>
+          <div class="first-list">
+              <h1>MENU</h1>
+          <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="#">image gallery</a></li>
+              <li><a href="#">video gallery</a></li>
+              <li><a href="#">bio</a></li>
+              <li><a href="#">quiz game</a></li>
+          </ul>
+      </div>
+      <div class="second-list">
+          <h1>DC</h1>
+      <ul>
+          <li><a href="#">dc official website</a></li>
+          <li><a href="#">dc universe infinite</a></li>
+          <li><a href="#">dc kids</a></li>
+          <li><a href="#">dc shop</a></li>
+          <li><a href="#">terms of use</a></li>
+          <li><a href="#">ad choices</a></li>
+          <li><a href="#">ratings</a></li>
+          <li><a href="#">shop help</a></li>
+      </ul>
+      </div>
+
+      <div class="address">
+          <h1>Address</h1>
+          <address>
+              Wayne manor,<br>1007 Mountain Drive<br> Gotham
+          </address>
+      </div>
+      </footer>
+
+  </div>
+  <div class="reserved-copyrights">
+      All right reserved &copy;  
+      <a href="mailto:kambojaryankamboj@gmail.com">AryanKamboj</a> 
+         and    
+          <a href="mailto:">kartikgarg</a>
+  </div>
+</body>
+</html>

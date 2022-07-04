@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronMan | Quiz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans+Condensed:wght@700&family=Poppins&family=Ubuntu:wght@500;700&display=swap');
+        * {
+            box-sizing: border-box;
+            padding: 0%;
+            margin: 0%;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* .quiz-section{
+    background: url('../Images/DC-Images/Riddler-wallpaper.jpg') center center/cover no-repeat;
+} */
+.topnav {
+            overflow: hidden;
+            background-color: rgba(218, 35, 35, 0.884);
+        }
+        
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: #770000;
+            color: white;
+        }
+        
+        .quiz-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 650px;
+            background: url('ironman.webp');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: drop-shadow(5px 5px 2px #000);
+            background-size: cover;
+        }
+        
+        .start-btn,
+        .info-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -80%);
+        }
+        
+        .start-btn button {
+            color: #7b00ff;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 25px;
+            padding: 20px;
+            outline: none;
+            border: 1px solid #7b00ff;
+            border-radius: 5px;
+            background: #fff;
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+        }
+        
+        .start-btn button:hover {
+            background-color: #7b00ff;
+            color: #fff;
+        }
+        
+        .info-box {
+            display: none;
+            width: 540px;
+            border: 10px;
+            background: #fff;
+        }
+        
+        .info-box .info-title {
+            border-bottom: 1px solid lightgray;
+            height: 60px;
+            font-size: 18px;
+            width: 100%;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .info-box .info-list .info {
+            margin: 15px 10px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .info-box .buttons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-top: 1px solid lightgray;
+        }
+        
+        .info-box .buttons button {
+            padding: 8px 5px;
+            margin: 12px 5px;
+            height: 40px;
+            width: 100px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            /* background: #007bff; */
+            border: 1px solid transparent;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 1s;
+        }
+        
+        .info-box .buttons .restart {
+            color: #007bff;
+            border-color: #007bff;
+        }
+        
+        .info-box .buttons .restart:hover {
+            color: #fff;
+            background-color: #007bff;
+        }
+        
+        .info-box .buttons .quit {
+            color: #fff;
+            background-color: #007bff;
+        }
+        
+        .info-box .buttons .quit:hover {
+            color: #007bff;
+            background-color: #fff;
+            border-color: #007bff;
+        }
+        
+         :root {
+            --hue-neutral: 200;
+            --hue-wrong: 0;
+            --hue-correct: 145;
+        }
+        
+        .container {
+            width: 540px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #fff;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            padding: 10px;
+            box-shadow: 0px 0px 10px 2px lightgray;
+            transform: translate(-50%, -70%);
+        }
+        
+        #question {
+            border-bottom: 1px solid lightgray;
+        }
+        
+        .btn-grid {
+            display: grid;
+            grid-template-rows: 80px 80px 80px 80px;
+            gap: 5px;
+            margin: 10px 0px;
+        }
+        
+        .butn {
+            --hue: var(--hue-neutral);
+            border: 1px solid hsl(var(--hue), 100%, 30%);
+            background-color: hsl(var(--hue), 100%, 50%);
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: #fff;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .butn:hover {
+            border-color: #000;
+        }
+        
+        .butn.correct {
+            --hue: var(--hue-correct);
+            color: #000;
+        }
+        
+        .butn.wrong {
+            --hue: var(--hue-wrong);
+        }
+        
+        .controls {
+            border-top: 1px solid lightgray;
+        }
+        
+        .nxt {
+            font-size: 16px;
+            border: 1px solid #007bff;
+            font-weight: 500;
+            margin: 10px 8px;
+            padding: 10px;
+            width: 100px;
+            height: 40px;
+            background-color: #fff;
+            color: #007bff;
+            cursor: pointer;
+        }
+        
+        .nxt:hover {
+            background: #007bff;
+            color: #fff;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .score-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hide {
+            display: none;
+        }    
+        
+        .footer footer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transform: translateX(-350px);
+        }
+        
+        .footer {
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background: url('ironman12.jpg')center center/cover no-repeat;
+        }
+        
+        .first-list h1 {
+            color: #fff;
+            padding: 10px;
+            margin: 2px;
+        }
+        
+        .first-list ul li {
+            list-style-type: none;
+        }
+        
+        .first-list ul li a {
+            text-decoration: none;
+            padding: 8px 10px;
+            margin: 2px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #959595;
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .first-list ul li a:hover {
+            color: #000095;
+        }
+        
+        .footer .address address {
+            color: #959595;
+            transform: translate(200px, 100px);
+        }
+        
+        .copyright {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(25, 25, 25, 0.75);
+            color: #959595;
+        }
+        
+        .copyright a {
+            text-decoration: none;
+            color: #959595;
+            font-weight: 700;
+        }
+        
+        .slideshow-container {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="iron-home.html">HOME</a>
+        <a href="iron-bio.html">BIO</a>
+        <a href="photo-gallery.html">PHOTO GALLERY</a>
+        <a  href="video-gallery-iron.html">VIDEO GALLERY</a>
+        <a class="active" href="#quiz">QUIZ</a>
+    </div>
+    <section class="quiz-section">
+        <div class="start-btn btn ">
+            <button id="start">
+            start quiz
+          </button>
+        </div>
+        <div class="info-box" id="info-box-1">
+            <div class="info-title">
+                <span>
+              Rules of the quiz
+            </span>
+            </div>
+            <div class="info-list">
+                <div class="info">1.Only 15 seconds will be given to attempt each question.</div>
+                <div class="info">2.Only one option can be selected at one time.</div>
+                <div class="info">3.You cannot select any option after time goes off.</div>
+                <div class="info">4.You cannot exit the quiz randomly.</div>
+                <div class="info">5.Points will be awarded on the basis of correct answers</div>
+            </div>
+            <div class="buttons">
+                <div class="btn">
+                    <button class="restart" id="continue">Continue</button>
+                </div>
+                <div class="btn">
+                    <button class="quit" id="exit">Quit</button>
+                </div>
+            </div>
+        </div>
+        <div class="container hide" id="question-container">
+            <div>
+                <div id="question">question</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="butn">Answer 1</button>
+                    <button class="butn">Answer 2</button>
+                    <button class="butn">Answer 3</button>
+                    <button class="butn">Answer 4</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="nxt-btn" class="nxt hide butn">Next</button>
+                <button id="qut-btn" class="nxt hide butn hide">Quit</button>
+            </div>
+        </div>
+
+        <div id="score-card" class="container hide score-card-container">
+            <div id="emoji" style="display: flex; justify-content: center; align-items: center;">
+                <span id="sticker" style="font-size: 4.1rem;">
+              🎊
+            </span>
+            </div>
+            <div id="score">
+                <h1>Congratulations</h1>
+                You have scored
+                <span id="count" style="color: #007bff;">9</span> out of <span>10</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <footer>
+            <div class="first-list">
+                <h1>MENU</h1>
+                <ul>
+                    <li><a href="iron-home.html">HOME</a></li>
+                    <li><a href="iron-bio.html">BIO</a></li>
+                    <li><a href="photo-gallery.html">PHOTO GALLERY</a></li>
+                    <li><a href="#">VIDEO GALLERY</a></li>
+                    <li><a href="#">QUIZ</a></li>
+                </ul>
+            </div>
+
+            <div class="first-list">
+                <h1>MARVEL</h1>
+                <ul>
+                    <li>
+                        <a href="#">DOCTOR STRANGE</a>
+                    </li>
+                    <li>
+                        <a href="#">BLACK WIDOW</a>
+                    </li>
+                    <li>
+                        <a href="#">SPIDERMAN</a>
+                    </li>
+                    <li>
+                        <a href="#">HAWKEYE</a>
+                    </li>
+                    <li>
+                        <a href="#">HULK</a>
+                    </li>
+                    <li>
+                        <a href="#">CAPTAIN AMERICA</a>
+                    </li>
+                    <li>
+                        <a href="#">SCARLET WITCH</a>
+                    </li>
+                    <li>
+                        <a href="#">WINTER SOLDIER</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="address">
+                <address>
+                Tony Stark, Stark Tower,<br> New york city , Midtown Manhattan
+            </address>
+            </div>
+        </footer>
+    </div>
+
+    <div class="copyright">
+        All rights reserved to &copy;<a href="mailto:kartikgupta1269@gmail.com">Kartik garg</a>
+    </div>
+    <script>
+        const startButton = document.getElementById('start');
+
+        const showScoreCard = document.getElementById('score-card');
+
+        const infoBox = document.getElementById('info-box-1');
+
+        const changeCount = document.getElementById('count');
+
+
+        const questionElement = document.getElementById('question');
+
+        const answerButtonsElement = document.getElementById('answer-buttons');
+
+        let shuffleQuestions, currentQuestionIndex;
+
+        const quitButton = document.getElementById('exit');
+        const quitQuizButton = document.getElementById('qut-btn');
+
+        const continueButton = document.getElementById('continue');
+        const nextButton = document.getElementById('nxt-btn')
+        const questionContainerElement = document.getElementById('question-container');
+
+        startButton.addEventListener('click', startGame)
+        nextButton.addEventListener('click', () => {
+            currentQuestionIndex++
+            setNextQuestion()
+        })
+
+        function startGame() {
+            infoBox.style.display = "block";
+            startButton.classList.add('hide');
+        }
+
+        continueButton.addEventListener('click', startQuiz)
+
+        function startQuiz() {
+            questionContainerElement.classList.remove('hide');
+            infoBox.style.display = "none";
+            shuffleQuestions = question.sort(() => Math.random() - .5);
+            currentQuestionIndex = 0;
+            setNextQuestion();
+        }
+
+        function setNextQuestion() {
+            resetState();
+            showQuestion(shuffleQuestions[currentQuestionIndex]);
+        }
+
+        function showQuestion(question) {
+            questionElement.innerText = question.question;
+            question.answers.forEach(answer => {
+                const button = document.createElement('button');
+                button.innerText = answer.text
+                button.classList.add('butn')
+                if (answer.correct) {
+                    button.dataset.correct = answer.correct
+                }
+                button.addEventListener('click', selectAnswer)
+                answerButtonsElement.appendChild(button)
+            })
+        }
+
+        function resetState() {
+            nextButton.classList.add('hide')
+            while (answerButtonsElement.firstChild) {
+                answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+            }
+        }
+
+        function selectAnswer(e) {
+            const selectedButton = e.target
+            const correct = selectedButton.dataset.correct
+            Array.from(answerButtonsElement.children).forEach(button => {
+                setStatusClass(button, button.dataset.correct);
+            })
+            if (shuffleQuestions.length > currentQuestionIndex + 1) {
+                nextButton.classList.remove('hide');
+            } else {
+                quitQuizButton.classList.remove('hide');
+            }
+        }
+        quitQuizButton.addEventListener('click', showScore)
+
+        function setStatusClass(element, correct) {
+            clearStatusClass(element)
+            if (correct) {
+                element.classList.add('correct')
+            } else {
+                element.classList.add('wrong')
+            }
+        }
+
+        function clearStatusClass(element) {
+            element.classList.remove('correct')
+            element.classList.remove('wrong')
+        }
+
+        function showScore() {
+            var c = 0;
+            showScoreCard.classList.remove('hide');
+            questionContainerElement.classList.add('hide');
+
+        }
+        const question = [{
+                question: "What is the name of Ironman Virtual assistant ?",
+                answers: [{
+                    text: "Jarvis",
+                    correct: true,
+                    count: true
+                }, {
+                    text: "Siri",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Alexa",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Google Assistant",
+                    correct: false,
+                    count: false
+                }]
+            }, {
+                question: "What does Ironman Lack ?",
+                answers: [{
+                    text: "Superpower",
+                    correct: true,
+                    count: true
+                }, {
+                    text: "Manners",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Furniture",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "An Amazing Car",
+                    correct: false,
+                    count: false
+                }]
+            }, {
+                question: "What is IronMan headquarter name ?",
+                answers: [{
+                    text: "Stark Tower",
+                    correct: true,
+                    count: false
+                }, {
+                    text: "Justice league Watcher",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "The Bat Cave",
+                    correct: false,
+                    count: true
+                }, {
+                    text: "X-Mansion",
+                    correct: false,
+                    count: false
+                }]
+            }, {
+                question: "What gadget does IronMan uses the most?",
+                answers: [{
+                    text: "Invisibility Cloak",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Adamantium Claws",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "IronMan Suit",
+                    correct: true,
+                    count: true
+                }, {
+                    text: "Wings that are like shield of steel",
+                    correct: false,
+                    count: false
+                }]
+            }, {
+                question: "Who is IronMan Girlfriend?",
+                answers: [{
+                    text: "Rose",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Black Widow",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Gamora",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Pepper",
+                    correct: true,
+                    count: true
+                }]
+            }, {
+                question: "In which American State the movie Avengers is shooted?",
+                answers: [{
+                    text: "New York",
+                    correct: true,
+                    count: false
+                }, {
+                    text: "New Jersey",
+                    correct: false,
+                    count: true
+                }, {
+                    text: "Washington",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Michigan",
+                    correct: false,
+                    count: false
+                }]
+            }, {
+                question: "What were his father Called ?",
+                answers: [{
+                    text: "Alfred",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Howard Stark",
+                    correct: true,
+                    count: true
+                }, {
+                    text: "Jarvis",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Steve",
+                    correct: false,
+                    count: false
+                }]
+            }, {
+                question: "What is IronMan's real name ?",
+                answers: [{
+                    text: "Howard Stark",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Tony Stark",
+                    correct: true,
+                    count: true
+                }, {
+                    text: "Brian Wayne",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "Roger Wayne",
+                    correct: false,
+                    count: false
+                }]
+            }, {
+                question: "What is the name of Villain in movie Avenger's End Game?",
+                answers: [{
+                    text: "The prankster",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "The fool",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "The jester",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "The Thanos",
+                    correct: true,
+                    count: true
+                }]
+            }, {
+                question: "What is the name of IronMan's company ?",
+                answers: [{
+                    text: "Stark Enterprise",
+                    correct: false,
+                    count: true
+                }, {
+                    text: "Stark tech",
+                    correct: true,
+                    count: false
+                }, {
+                    text: "Stark Corp",
+                    correct: false,
+                    count: false
+                }, {
+                    text: "stark Solutions",
+                    correct: false,
+                    count: false
+                }]
+            },
+
+        ]
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BATMAN | VIDEO GALLERY</title>
+    <link rel="icon" href="../Images/Batman-new-Logo2-removebg-preview.png">
+    <link rel="stylesheet" href="../srylesheet/globalstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var loader={
+        initialize: function(){
+          var html= 
+          '<div class=load-overlay id=Overlay>'
+               +'<div class=preloader id=preload>'+
+                   '<img src=../Images/Batman-new-Logo2-removebg-preview.png alt= style=filter: invert(100%);>'+
+                 '</div>'+
+               '</div>'
+               $('body').append(html);
+         },
+         showLoader:function(){
+           $('#Overlay').show();
+           $('#preload').show();
+         },
+         hideLoader:function(){
+           $('#Overlay').hide();
+           $('#preload').hide();
+         }
+       }
+       $(function(){
+         loader.initialize();
+         $('.load-screen').on('click',function(){
+           loader.showLoader();
+           setInterval(function(){
+             loader.hideLoader();
+           },3000);
+         })
+       })  
+      
+      </script>
+      <style>
+          .foot{
+            margin: 20px 0px 0px 0px;
+          }
+          .video-carousel{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              width: 100%;
+              background: url('../Images/DC-Images/Joker/bat-bg-1.jpg')center center/cover no-repeat;
+              height: 800px;
+          }
+          .video-container{
+              margin:110px 0px 0px 0px;
+          }
+          .video-slider ul{
+              list-style-type: none;
+              display: flex;
+          }
+          .video-slider ul li{
+              margin: 0px 10px;
+              z-index: 1;
+              cursor: pointer;
+              transition: 0.5s;
+              padding: 3px 3px 0;
+              opacity: 0.7;
+          }
+          .video-slider ul li:hover{
+              opacity: 1;
+          }
+          .video-slider ul li img{
+              transition: 0.5s;
+              border: 4px solid #1f1f1f;
+
+          }
+          .video-slider ul li img:hover{
+              width: 220px;
+          }
+          video{
+              width:800px;
+          }
+          .active-slide{
+              opacity: 1;
+              width: 220px;
+          }
+      </style>
+
+</head>
+<body>
+    <div class="navbar-container">
+        <img src="../Images/Batman-new-Logo2-removebg-preview.png" alt="">
+        <nav id="navigation">
+            <ul class="nav-list">
+                <li><a href="index2.html" class="load-screen">home</a></li>
+                <li><a href="image-gallery2.html" class="load-screen">image gallery</a></li>
+                <li><a href="#" class="load-screen active">video gallery</a></li>
+                <li><a href="Bat_bio.html" class="load-screen">bio</a></li>
+                <li><a href="quiz.html" class="load-screen">quiz game</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="video-carousel">
+      <div class="video-container" >
+          <video controls id="source-container" poster="transparent">
+              <source src="../Videos/the_batman_trailer_(2022).mp4">
+          </video>
+      </div>
+      <div class="video-slider">
+          <ul>
+              <li onclick="videoUrl('../Videos/the_batman_trailer_(2022).mp4')"><img src="../Images/the-batman-2020-movie-poster.jpg" alt="" width="200px" onclick="addClass(1)" id="img-1"></li>
+              <li onclick="videoUrl('../Videos/the_dark_knight_rises_(2012)_-_bane_vs_batman_-_final_fight[Mp4Mafia.com].mp4')" ><img src="../Images/bane_vs_batman_fanart.jpg" alt="" width="200px" onclick="addClass(2)" id="img-2"></li>
+              <li onclick="videoUrl('../Videos/batman_interrogates_the_joker.mp4')"><img src="../Images/interrogating-joker.jpg" alt="" width="200px" onclick="addClass(3)" id="img-3"></li>
+          </ul>
+      </div>
+    </section>
+    <div class="foot">
+        <img src="../Images/DC-Images/batman_char.png" alt="">
+        <footer>
+            <div class="first-list">
+                <h1>MENU</h1>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">image gallery</a></li>
+                <li><a href="#">video gallery</a></li>
+                <li><a href="#">bio</a></li>
+                <li><a href="#">quiz game</a></li>
+            </ul>
+        </div>
+        <div class="second-list">
+            <h1>DC</h1>
+        <ul>
+            <li><a href="#">dc official website</a></li>
+            <li><a href="#">dc universe infinite</a></li>
+            <li><a href="#">dc kids</a></li>
+            <li><a href="#">dc shop</a></li>
+            <li><a href="#">terms of use</a></li>
+            <li><a href="#">ad choices</a></li>
+            <li><a href="#">ratings</a></li>
+            <li><a href="#">shop help</a></li>
+        </ul>
+        </div>
+
+        <div class="address">
+            <h1>Address</h1>
+            <address>
+                Wayne manor,<br>1007 Mountain Drive<br> Gotham
+            </address>
+        </div>
+        </footer>
+
+    </div>
+    <div class="reserved-copyrights">
+        All right reserved &copy;  
+        <a href="mailto:kambojaryankamboj@gmail.com">AryanKamboj</a> 
+           and    
+            <a href="mailto:">kartikgarg</a>
+    </div>
+    <script>
+         window.onscroll=function(){
+           scrolling();
+       }
+       var getNav=document.getElementById('navigation');
+       var s=getNav.offsetTop;
+       function scrolling(){
+           if(window.pageYOffset>s){
+               getNav.classList.add("fixed");
+           }else{
+               getNav.classList.remove("fixed");
+           }
+       }
+       function videoUrl(arg){
+           document.getElementById('source-container').src=arg;
+       }
+       function addClass(abc){
+           if(abc=="1"){
+               document.getElementById('img-1').classList.add('active-slide');
+           }else{
+               document.getElementById('img-1').classList.remove('active-slide');
+           }
+           if(abc=="2"){
+            document.getElementById('img-2').classList.add('active-slide');
+           }else{
+            document.getElementById('img-2').classList.remove('active-slide');
+           }
+           if(abc=="3"){
+            document.getElementById('img-3').classList.add('active-slide');
+           }else{
+            document.getElementById('img-3').classList.remove('active-slide');
+
+           }
+       }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans+Condensed:wght@700&family=Ubuntu:wght@500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.load-overlay{
+    display: none;
+               height:100%;
+               width: 100%;
+               position: fixed;
+           
+               background: rgba(26, 26, 26, 0.7);
+               z-index: 5;
+               top: 0;
+    }
+           .preloader{
+               display: none;
+               top: 50%;
+               left: 50%;
+               transform: translate(20%,20%);
+               z-index: 7;
+           }
+           .preloader img{
+               animation: animate 2s ease-in-out infinite;
+               width: 900px;
+               z-index: 10;
+           }
+           @keyframes animate {
+               25%{
+                   filter: invert(25%);
+               }
+               50%{
+                   filter: invert(50%);
+               }
+               75%{
+                   filter: invert(75%);
+               }
+               100%{
+                   filter: invert(100%);
+               }           
+           }
+.navbar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: rgb(25 16 16)
+
+}
+.navbar-container img{
+    filter: contrast(20%);
+    animation: animate-top 5s linear infinite;
+}
+@keyframes animate-top{
+    0%{
+    filter: invert(100%);
+
+    }
+   25%{
+       filter: drop-shadow(0px 5px 1px #7e1010);
+   }
+   50%{
+       filter: invert(100%);
+   }
+   75%{
+       filter: drop-shadow(0px 5px 1px #a81717);
+   }
+   100%{
+    filter: invert(100%);
+
+   }
+}
+
+.navbar-container img:hover{
+    filter: contrast(100%);
+    filter: invert(100%);
+}
+.navbar-container nav{
+    z-index: 100000 !important;
+    width: 100%;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    background:rgb(79, 4, 4);;
+}
+.navbar-container .nav-list{
+    display: flex;
+    list-style-type: none;
+}
+.nav-list li a{
+    display: block;
+    float: left;
+    padding: 20px;
+    position:relative;
+    color: #fff;
+    border: none;
+    font-family: 'Open Sans Condensed', sans-serif;   
+    /* background: #7e0101; */
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 1s;
+}
+.nav-list a:hover{
+    background: #9c0404;
+    color: #ebeebe;
+}
+.active{
+    background: #9c0404;
+    color: #ebeebe;
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+.foot{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../Images/DC-Images/footer-bg.jpg') center center/cover no-repeat;
+    height: 500px;
+}
+.foot img{
+    transform: translate(-280px,-100px);
+}
+.foot footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foot footer .first-list,.foot footer .second-list,.foot footer address{
+    padding: 20px;
+    margin: 5px 10px;
+}
+.foot footer .first-list{
+    transform: translateY(-25px);
+}
+.foot footer .first-list h1,.foot footer .second-list h1{
+    color: #ebeebe;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.foot footer .first-list ul li,.foot footer .second-list ul li{
+    list-style: none;
+}
+.foot footer .first-list ul li a,.foot footer .second-list ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size:1rem ;
+    color: #959595;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+    line-height: 1rem;
+    transition: 0.2s;
+}
+.foot footer .first-list ul li a:hover,.foot footer .second-list ul li a:hover{
+    color: #095c7c;
+}
+.foot footer .address address{
+    color: #959595;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 20px;
+    margin: 10px;
+
+}
+.foot footer .address h1{
+    color: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;   
+}
+.reserved-copyrights{
+    color: #959595;
+    font-family: 'Open Sans Condensed', sans-serif;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(26, 26, 26);
+    word-spacing: 5px;
+
+}
+.reserved-copyrights a{
+    color: #959595;
+    text-decoration: none;
+    word-spacing: 5px;
+
+}

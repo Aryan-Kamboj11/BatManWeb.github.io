@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:wght@500;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    /* background:rgba(25, 25, 25, 0.8); */
+    z-index: 1000;
+    position: sticky;
+}
+
+.nav-container img{
+    height: 80px;
+    filter:drop-shadow(0px 0px 4px #1f1f1f) blur(2px);
+    cursor: pointer;  
+}
+.nav-container img:hover{
+    animation: animate 3s ease-in-out 1ms infinite ;
+}
+@keyframes animate {
+    0%{
+        filter: hue-rotate(90deg) drop-shadow(0px 0px 4px #1f1f1f);
+    }
+    25%{
+        filter: hue-rotate(180deg) drop-shadow(0px 0px 4px #1f1f1f);
+    }
+    50%{
+        filter: hue-rotate(270deg)  drop-shadow(0px 0px 4px #1f1f1f);
+    }
+    75%{
+        filter: hue-rotate(315deg)  drop-shadow(0px 0px 4px #1f1f1f);
+    }
+    100%{
+        filter: hue-rotate(400deg)  drop-shadow(0px 0px 4px #1f1f1f);
+    }
+}
+.nav-container nav ul{
+    list-style-type: none;
+    display: flex;
+    margin-top: 30px;
+}
+.nav-container nav ul li a{
+    padding: 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: 1.2rem;
+    filter: blur(2px);
+    transition: filter ease-in 1s;
+    font-family: 'Ubuntu', sans-serif;
+  
+}
+.nav-container nav ul li a:hover{
+    filter: blur(0);
+}
+.container {
+    position: absolute;
+    top: 0;
+    margin-top: -30px;
+    z-index: 1;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .video-container{
+      background: url('../Images/DC-Images/Joker/bat-bg-1.jpg') center center/cover no-repeat;
+      height: 1000px;
+      position: relative;
+      margin-top:-120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* flex-direction: column; */
+  }
+  .video-box{
+      display: flex;
+      flex-direction: column;
+  }
+  #icon-1{
+      transform: translateX(-286px);
+  }
+  #icon-2{
+      transform: translate(286px,-5px);
+  }
+  .video-container-2{
+    height: 1000px;
+    position: relative;
+    /* margin-top:-120px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bio{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    
+  }
+  .bio h1{
+    color: #f2f2f2;
+  }
+  .bio .bat-bio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 13px groove #f2f2f2;
+    background: rgba(19, 18, 18, 0.5);
+  }
+  .bio-details ul li{
+    text-transform: uppercase;
+    padding: 2px;
+  }
+  .bio-details ul{
+    margin: 10px;
+  }
+  .weapons{
+    display: grid;
+    grid-template-columns: .1fr .1fr .1fr .1fr .1fr;
+    /* grid-template-rows: 300px 300px 300px; */
+    margin: 200px 100px 100px 100px;
+  }
+  .weapons .bat-weapon-img img{
+    width: 250px;
+    height: 300px;
+  }
+  .weapons .bat-weapon-img a{
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+    color: black;
+  }
+  .weapons .bat-weapon-img a:hover{
+    color: blue;
+  }
+  .weapon-heading{
+    transform: translate(650px,125px);
+    color: #000;
+    user-select: none;
+  }
+  .weapon-heading:hover{
+    color: blue;
+  }
+  .vehicles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .enemies{
+    display: grid;
+    grid-template-columns: .1fr .1fr .1fr .1fr .1fr ;
+    margin: 250px;
+  }
+  .enemy-img img{
+    height: 300px;
+  }
+  .enemy-img a{
+    color: #000;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+  }
+  .enemy-img a:hover{
+    color: blue;
+  }

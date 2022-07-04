@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans+Condensed:wght@700&family=Ubuntu:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.main-image{
+    background: url('../Images/DC-Images/Joker/bat-bg-1.jpg') center center/cover no-repeat;
+}
+.main-image img{
+    filter: drop-shadow(2px 2px 8px #757575);
+}
+.character-container{
+    background: url('../Images/DC-Images/homepage/wp4294831-batman-4k-wallpapers-3.jpg')center center/cover no-repeat;
+    height: 900px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.character-container .character-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 30px; */
+    margin: 0px 10px 0px 20px;
+}
+.character-info h1{
+    font-size: 7.2rem;
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+}
+.character-info h3{
+    transform: translate(70px,30px);
+    font-size: 1.4rem;
+    font-family: 'Bebas Neue', cursive;
+
+    color: #fff;
+}
+.character-info .facts {
+    padding:0 20px 0px 20px;
+    margin: 0 10px 0px 10px;
+    display: inline-block;
+}
+.character-info .facts p{
+    padding:0px 40px 10px 20px;
+    /* display: block; */
+    font-family: 'Oswald', sans-serif;
+
+    text-transform: uppercase;
+    color: #fff;
+    /* font-size: 1.3rem; */
+}
+.character-info a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 1px solid;
+    border-radius: 12px;
+    font-family: 'Bebas Neue', cursive;
+
+    padding: 10px 8px;
+    /* outline: none; */
+    color: #fff;
+    background: #000;
+    transition: all 1s;
+}
+.character-info a:hover{
+    border-color: #000;
+    background: transparent;
+}
+.bat-mobile{
+    position: relative;
+    background: url('../Images/DC-Images/homepage/batman-batmobile-img-1.jpg')center center/cover no-repeat;
+    top: 0;
+    left: 0;
+    height: 900px;
+    z-index: 0;
+}
+.bat-mobile::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 900px;
+    background: rgba(0, 0, 0, 0.69);
+    top: 0;
+    left: 0;
+}
+.bat-mobile-para h1{
+    padding: 0px 30px 0px 20px;
+    margin: 0px 10px 1px 10px;
+    color: #fff;
+    font-size: 5.2rem;
+    font-family: 'Bebas Neue', cursive;
+}
+.specs{
+    transform: translateY(-750px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction:row;
+    position: absolute;
+}
+.bat-mobile-para h3{
+    font-size: 1.3rem;
+    padding: 0px 30px 0px 20px;
+    margin: 0px 10px 1px 10px;
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+    transform: translateY(25px);
+}
+.bat-mobile-para ul{
+    list-style-type:none;
+    padding: 10px 25px;
+}
+.bat-mobile-para ul li{
+    padding: 0px 30px 10px 20px;
+    margin: 0px 10px 1px 10px;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+}
+.bat-mobile-image img{
+ border-radius: 30px;   
+ box-shadow: 1px 1px 15px 18px #353333;
+ outline: #353333;
+}

@@ -1,0 +1,382 @@
+<html>
+
+<head>
+    <style>
+        .index {
+            opacity: 0.8;
+            background-color: black;
+        }
+        
+        .first {
+            margin-left: 700px;
+            margin-top: 50px;
+        }
+        
+        .button {
+            cursor: pointer;
+        }
+        
+        .button:active {
+            box-shadow: 0 5px #666;
+            background-color: blanchedalmond;
+            transform: translateY(4px);
+        }
+        
+        .button:hover {
+            background-color: blueviolet;
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            min-width: 500px;
+            max-width: 700px;
+            position: relative;
+            margin: auto;
+            margin-top: 20px;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Caption text */
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /* On smaller screens, decrease text size */
+        
+        @media only screen and (max-width: 300px) {
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+        
+        .second {
+            float: left;
+            margin-left: 100px;
+        }
+        
+        .iron-man2:hover,
+        .iron-man3:hover,
+        .iron-man1:hover {
+            opacity: 0.85;
+        }
+        
+        .iron-man1-video,
+        .iron-man2-video,
+        .iron-man3-video,
+        .iron-man1,
+        .iron-man2,
+        .iron-man3 {
+            width: 25%;
+            float: left;
+        }
+        
+        .table {
+            margin-top: 175px;
+            margin-left: 15px;
+        }
+        
+        td {
+            background-color: black;
+            opacity: 0.7;
+            color: blanchedalmond;
+        }
+        
+        td:hover {
+            opacity: 0.8;
+        }
+        
+        ul {
+            display: flex;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: rgba(218, 35, 35, 0.884);
+        }
+        
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: #770000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="iron.html">HOME</a>
+        <a href="iron-bio.html">BIO</a>
+        <a href="photo-gallery.html">PHOTO GALLERY</a>
+        <a href="#about">VIDEO GALLERY</a>
+        <a href="#quiz">QUIZ</a>
+    </div>
+
+
+
+    <div class="second">
+        <img src="iron-head.jpg">
+    </div>
+
+
+    <div class="first">
+
+        <h1 class="first-h1">
+            IRON MAN
+        </h1>
+
+        <p class="first-p" style="font-family: fantasy;">
+            Tony Stark, who has inherited the defense contractor Stark Industries from his late father Howard Stark, is in war-torn Afghanistan with his friend and military liaison, Lieutenant colonel James Rhodes, to demonstrate the new "Jericho" missile. After
+            the demonstration, the convoy is ambushed and Stark is critically wounded by a missile used by the attackers: one of his company's own. He is captured and imprisoned in a cave by a terrorist group called the Ten Rings. Yinsen, a fellow captive
+            doctor, implants an electromagnet into Stark's chest to keep the shrapnel shards that wounded him from reaching his heart and killing him. Ten Rings leader Raza offers Stark freedom in exchange for building a Jericho missile for the group,
+            but he and Yinsen know that Raza will not keep his word.
+        </p>
+        <button class="button">
+            <a href="#" style="text-decoration: none;color: black;">READ MORE</a>
+
+        </button>
+
+    </div>
+
+
+    <table class="table">
+        <tr>
+            <th class="m">MOVIE NAME</th>
+            <th class="t">TRAILER</th>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="h">IRON MAN 1</div>
+                </br>
+                Tony Stark, who has inherited the defense contractor Stark Industries from his late father Howard Stark, is in war-torn Afghanistan with his friend and military liaison, Lieutenant colonel James Rhodes, to demonstrate the new "Jericho" missile. After
+                the demonstration, the convoy is ambushed and Stark is critically wounded by a missile used by the attackers: one of his company's own. He is captured and imprisoned in a cave by a terrorist group called the Ten Rings. Yinsen, a fellow
+                captive doctor, implants an electromagnet into Stark's chest to keep the shrapnel shards that wounded him from reaching his heart and killing him. Ten Rings leader Raza offers Stark freedom in exchange for building a Jericho missile for
+                the group, but he and Yinsen know that Raza will not keep his word.
+            </td>
+
+            <td>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FHU49CD0TOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="h">IRON MAN 2</div>
+                </br>
+                A sequel written by Justin Theroux and released in the United States on May 7, 2010, saw Favreau, Downey, Paltrow, and Jackson returning. Don Cheadle replaced Terrence Howard in the role of Colonel Rhodes, who is also seen as War Machine. Also starring
+                are Mickey Rourke as villain Ivan Vanko, Sam Rockwell as Justin Hammer, and Scarlett Johansson as S.H.I.E.L.D. agent Natasha Romanoff.
+            </td>
+
+            <td>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qsRZghNciIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="h">IRON MAN 3</div>
+                </br>
+                Walt Disney Studios and Marvel Studios released a second sequel on May 3, 2013,[154] with Favreau opting to direct Magic Kingdom instead, but still reprising his role as Happy Hogan.[155] Downey, Paltrow, and Cheadle also return, while Shane Black took
+                over directing,[156] from a screenplay by Drew Pearce. Guy Pearce also starred as Aldrich Killian, and Ben Kingsley as Trevor Slattery.
+            </td>
+
+            <td>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ke1Y3P9D0Bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </td>
+        </tr>
+    </table>
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 10</div>
+            <img src="i1.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 10</div>
+            <img src="i2.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 10</div>
+            <img src="i3.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 10</div>
+            <img src="i4.jpg" style="width:100%">
+            <div class="text">Caption four</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 10</div>
+            <img src="i5.jpg" style="width:100%">
+            <div class="text">Caption five</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 10</div>
+            <img src="i6.jpg" style="width:100%">
+            <div class="text">Caption six</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 10</div>
+            <img src="i7.jpg" style="width:100%">
+            <div class="text">Caption seven</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">8 / 10</div>
+            <img src="i8.jpg" style="width:100%">
+            <div class="text">Caption eight</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">9 / 10</div>
+            <img src="i9.jpg" style="width:100%">
+            <div class="text">Caption nine</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">10 / 10</div>
+            <img src="i10.jpg" style="width:100%">
+            <div class="text">Caption Ten</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

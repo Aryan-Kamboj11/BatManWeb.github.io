@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BATMAN | QUIZ</title>
+    <link rel="icon" href="../Images/Batman-new-Logo2-removebg-preview.png">
+    <link rel="stylesheet" href="../srylesheet/globalstyle.css">
+    <link rel="stylesheet" href="../srylesheet/quizstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="quizjavascript.js"></script>
+
+    <script>
+        var loader={
+        initialize: function(){
+          var html= 
+          '<div class=load-overlay id=Overlay>'
+               +'<div class=preloader id=preload>'+
+                   '<img src=../Images/Batman-new-Logo2-removebg-preview.png alt= style=filter: invert(100%);>'+
+                 '</div>'+
+               '</div>'
+               $('body').append(html);
+         },
+         showLoader:function(){
+           $('#Overlay').show();
+           $('#preload').show();
+         },
+         hideLoader:function(){
+           $('#Overlay').hide();
+           $('#preload').hide();
+         }
+       }
+       $(function(){
+         loader.initialize();
+         $('.load-screen').on('click',function(){
+           loader.showLoader();
+           setInterval(function(){
+             loader.hideLoader();
+           },3000);
+         })
+       })  
+      
+      </script>
+</head>
+<body>
+    <div class="navbar-container">
+        <img src="../Images/Batman-new-Logo2-removebg-preview.png" alt="">
+        <nav id="navigation">
+            <ul class="nav-list">
+                <li><a href="index2.html" class="load-screen">home</a></li>
+                <li><a href="image-gallery2.html" class="load-screen">image gallery</a></li>
+                <li><a href="video-gallery2.html" class="load-screen ">video gallery</a></li>
+                <li><a href="Bat_bio.html" class="load-screen">bio</a></li>
+                <li><a href="#" class="load-screen active">quiz game</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="quiz-section">
+    <div class="start-btn btn " >
+      <button id="start">
+        start quiz
+      </button>
+    </div>
+    <div class="info-box" id="info-box-1">
+      <div class="info-title">
+        <span>
+          Rules of the quiz
+        </span>
+      </div>
+      <div class="info-list">
+        <div class="info">1.Only 15 seconds will be given to attempt each question.</div>
+        <div class="info">2.Only one option can be selected at one time.</div>
+        <div class="info">3.You cannot select any option after time goes off.</div>
+        <div class="info">4.You cannot exit the quiz randomly.</div>
+        <div class="info">5.Points will be awarded on the basis of correct answers</div>
+      </div>
+      <div class="buttons">
+        <div class="btn" >
+          <button class="restart" id="continue">Continue</button>
+        </div>
+        <div class="btn">
+          <button class="quit" id="exit">Quit</button>
+        </div>
+      </div>
+    </div> 
+    <div class="container hide" id="question-container">
+      <div>
+        <div id="question">question</div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="butn">Answer 1</button>
+          <button class="butn">Answer 2</button>
+          <button class="butn">Answer 3</button>
+          <button class="butn">Answer 4</button>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="nxt-btn" class="nxt hide butn">Next</button>
+        <button id="qut-btn" class="nxt hide butn hide">Quit</button>
+      </div>
+    </div>
+
+    <div id="score-card" class="container hide score-card-container">
+      <div id="emoji" style="display: flex; justify-content: center; align-items: center;">
+        <span id="sticker" style="font-size: 4.1rem;">
+          🎊
+        </span>
+      </div>
+      <div id="score">
+        <h1>Congratulations</h1>
+        You have scored
+        <span id="count" style="color: #007bff;">9</span>
+        out of <span>10</span>
+      </div>
+    </div>
+  </section>
+
+
+    <div class="foot">
+      <img src="../Images/DC-Images/batman_char.png" alt="">
+      <footer>
+          <div class="first-list">
+              <h1>MENU</h1>
+          <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="#">image gallery</a></li>
+              <li><a href="#">video gallery</a></li>
+              <li><a href="#">bio</a></li>
+              <li><a href="#">quiz game</a></li>
+          </ul>
+      </div>
+      <div class="second-list">
+          <h1>DC</h1>
+      <ul>
+          <li><a href="#">dc official website</a></li>
+          <li><a href="#">dc universe infinite</a></li>
+          <li><a href="#">dc kids</a></li>
+          <li><a href="#">dc shop</a></li>
+          <li><a href="#">terms of use</a></li>
+          <li><a href="#">ad choices</a></li>
+          <li><a href="#">ratings</a></li>
+          <li><a href="#">shop help</a></li>
+      </ul>
+      </div>
+
+      <div class="address">
+          <h1>Address</h1>
+          <address>
+              Wayne manor,<br>1007 Mountain Drive<br> Gotham
+          </address>
+      </div>
+      </footer>
+
+  </div>
+  <div class="reserved-copyrights">
+      All right reserved &copy;  
+      <a href="mailto:kambojaryankamboj@gmail.com">AryanKamboj</a> 
+         and    
+          <a href="mailto:">kartikgarg</a>
+  </div>
+</body>
+</html>

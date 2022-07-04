@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: rgba(218, 35, 35, 0.884);
+        }
+        
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: #770000;
+            color: white;
+        }
+        
+        .footer footer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transform: translateX(-350px);
+        }
+        
+        .footer {
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background: url('ironman12.jpg')center center/cover no-repeat;
+        }
+        
+        .first-list h1 {
+            color: #fff;
+            padding: 10px;
+            margin: 2px;
+        }
+        
+        .first-list ul li {
+            list-style-type: none;
+        }
+        
+        .first-list ul li a {
+            text-decoration: none;
+            padding: 8px 10px;
+            margin: 2px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #959595;
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .first-list ul li a:hover {
+            color: #000095;
+        }
+        
+        .footer .address address {
+            color: #959595;
+            transform: translate(200px, 100px);
+        }
+        
+        .copyright {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(25, 25, 25, 0.75);
+            color: #959595;
+        }
+        
+        .copyright a {
+            text-decoration: none;
+            color: #959595;
+            font-weight: 700;
+        }
+        
+        .slideshow-container {
+            width: 100%;
+        }
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /* On smaller screens, decrease text size */
+        
+        @media only screen and (max-width: 300px) {
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+        
+        .first-t iframe,
+        .second-t iframe,
+        .third-t iframe {
+            height: 400px;
+            width: 700px;
+            transform: translate(300px, 100px);
+            box-shadow: 3px 2px 6px 3px lightgrey;
+        }
+        
+        .first-t {
+            background: url('ironbg1.jpg')center center/cover no-repeat;
+            width: 100%;
+            height: 600px;
+        }
+        
+        .second-t {
+            background: url('ironbg2.jpg')center center/cover no-repeat;
+            width: 100%;
+            height: 600px;
+        }
+        
+        .third-t {
+            background: url('ironbg3.jpg')center center/cover no-repeat;
+            width: 100%;
+            height: 600px;
+        }
+        
+        .first-t h1,
+        .second-t h1,
+        .third-t h1 {
+            color: ivory;
+            font-weight: 1000;
+            font-family: fantasy;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="iron-home.html">HOME</a>
+        <a href="iron-bio.html">BIO</a>
+        <a href="photo-gallery.html">PHOTO GALLERY</a>
+        <a class="active" href="video-gallery-iron.html">VIDEO GALLERY</a>
+        <a href="#quiz">QUIZ</a>
+    </div>
+
+    <div class="first-t">
+        <h1>IRON MAN 1</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KAE5ymVLmZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+
+    <div class="second-t">
+        <h1>IRON MAN 2</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wKtcmiifycU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+
+    <div class="third-t">
+        <h1>IRON MAN 3</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ke1Y3P9D0Bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+
+
+    <div class="footer">
+        <footer>
+            <div class="first-list">
+                <h1>MENU</h1>
+                <ul>
+                    <li><a href="iron-home.html">HOME</a></li>
+                    <li><a href="iron-bio.html">BIO</a></li>
+                    <li><a href="photo-gallery.html">PHOTO GALLERY</a></li>
+                    <li><a href="#">VIDEO GALLERY</a></li>
+                    <li><a href="#">QUIZ</a></li>
+                </ul>
+            </div>
+
+            <div class="first-list">
+                <h1>MARVEL</h1>
+                <ul>
+                    <li>
+                        <a href="#">DOCTOR STRANGE</a>
+                    </li>
+                    <li>
+                        <a href="#">BLACK WIDOW</a>
+                    </li>
+                    <li>
+                        <a href="#">SPIDERMAN</a>
+                    </li>
+                    <li>
+                        <a href="#">HAWKEYE</a>
+                    </li>
+                    <li>
+                        <a href="#">HULK</a>
+                    </li>
+                    <li>
+                        <a href="#">CAPTAIN AMERICA</a>
+                    </li>
+                    <li>
+                        <a href="#">SCARLET WITCH</a>
+                    </li>
+                    <li>
+                        <a href="#">WINTER SOLDIER</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="address">
+                <address>
+                    Tony Stark, Stark Tower,<br> New york city , Midtown Manhattan
+                </address>
+            </div>
+        </footer>
+    </div>
+
+    <div class="copyright">
+        All rights reserved to &copy;<a href="mailto:kartikgupta1269@gmail.com">Kartik garg</a>
+    </div>
+</body>

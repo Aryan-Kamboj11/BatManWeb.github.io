@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batman | Bio</title>
+    <link rel="icon" href="../Images/Batman-new-Logo2-removebg-preview.png">
+    <link rel="stylesheet" href="../srylesheet/globalstyle.css">
+    <link rel="stylesheet" href="../srylesheet/quizstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="quizjavascript.js"></script>
+
+    <script>
+        var loader={
+        initialize: function(){
+          var html= 
+          '<div class=load-overlay id=Overlay>'
+               +'<div class=preloader id=preload>'+
+                   '<img src=../Images/Batman-new-Logo2-removebg-preview.png alt= style=filter: invert(100%);>'+
+                 '</div>'+
+               '</div>'
+               $('body').append(html);
+         },
+         showLoader:function(){
+           $('#Overlay').show();
+           $('#preload').show();
+         },
+         hideLoader:function(){
+           $('#Overlay').hide();
+           $('#preload').hide();
+         }
+       }
+       $(function(){
+         loader.initialize();
+         $('.load-screen').on('click',function(){
+           loader.showLoader();
+           setInterval(function(){
+             loader.hideLoader();
+           },3000);
+         })
+       })  
+      </script>
+      <style>
+          @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fruktur&family=Open+Sans+Condensed:wght@700&family=Poppins&family=Ubuntu:wght@500;700&display=swap');
+          .bio-container{
+              display: grid;
+              grid-template-columns: .8fr 4fr .8fr;
+          }
+          .empty{
+            background: rgb(50, 0, 0);
+
+              height: 1800px;
+          }
+          .bio-page .starting img{
+            filter: drop-shadow(1px 1px 5px #1f1f1f);
+          }
+          .bio-page{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: row;
+              flex-wrap: wrap;
+
+          }
+          .starting{
+              flex-basis: 30%;
+              font-size: 25px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+          }
+          .starting .bio-paragraph{
+            font-family: 'Fruktur', cursive;
+            font-weight: 400;
+            line-height: 20px;
+            user-select: none;
+            width: 1000px;
+            top: 0;
+            left: 0;
+          }
+          marquee{
+              margin: 20px;
+              padding: 5px;
+          }
+          marquee img{
+              cursor: pointer;  
+          }
+       
+          .slideshow{ 
+              text-align: center;
+              margin: 20px 0px 0px 0px;
+              flex-basis: 20%;
+
+          }
+          .slideshow h2{
+            font-family: 'Fruktur', cursive;
+            text-transform: uppercase;
+            text-shadow: 0px 1px 4px #1f1f1f;
+            
+          }
+      </style>
+</head>
+<body>
+    <div class="navbar-container">
+        <img src="../Images/Batman-new-Logo2-removebg-preview.png" alt="">
+        <nav id="navigation">
+            <ul class="nav-list">
+                <li><a href="index2.html" class="load-screen">home</a></li>
+                <li><a href="image-gallery2.html" class="load-screen">image gallery</a></li>
+                <li><a href="video-gallery2.html" class="load-screen ">video gallery</a></li>
+                <li><a href="#" class="load-screen active">bio</a></li>
+                <li><a href="quiz.html" class="load-screen ">quiz game</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="bio-container">
+        <div class="empty"></div>
+        <div class="bio-page">
+            <div class="starting bio">
+                <img src="../Images/DC-Images/Batman-PNG-Image.png" alt="" width="600px">
+                <div class="bio-paragraph">
+                    Batman's secret identity is Bruce Wayne, a wealthy American industrialist. As a child, Bruce witnessed the murder of his parents, Dr. Thomas Wayne and Martha Wayne, <br> which ultimately led him to craft the Batman persona and seek justice against criminals. <br> He resides on the outskirts of Gotham City in his personal residence, Wayne Manor. Wayne averts suspicion by acting the part of a superficial playboy idly living off his family's fortune and the profits of Wayne Enterprises, his inherited conglomerate.He supports philanthropic causes <br> through his nonprofit Wayne Foundation, but is more widely known as a celebrity socialite. In public, he frequently appears in the company of high-status women, <br> which encourages tabloid gossip. Although Bruce Wayne leads an active romantic life, his vigilante activities as Batman account for most of his time.
+                </div>
+                    
+            </div>
+            <div class="slideshow bio">
+                <h2 width="100px">
+                  Movies
+                </h2>
+                <marquee behavior="alternate" direction="left" width="1000px">
+                    <img src="../Images/DC-Images/Posters/first-poster.jpg" alt="" height="400px" >
+                    <img src="../Images/DC-Images/Posters/second-poster.jpg" alt="" height="400px" >
+                    <img src="../Images/DC-Images/Posters/third-poster.jpg" alt="" height="400px" >
+                    <img src="../Images/DC-Images/Posters/fouth-poster.jpg" alt="" height="400px" >
+                    <img src="../Images/DC-Images/Posters/fifth-poster.jpg" alt="" height="400px" >
+                    <img src="../Images/the-batman-2020-movie-poster.jpg" alt="" height="400px" >
+                </marquee>
+            </div>
+            <div class="slideshow bio">
+              <h2>Comics</h2>
+              <marquee behavior="alternate" direction="left" width="1000px">
+                <img src="../Images/DC-Images/Comics/first.jpg" alt="" width="400px">
+                <img src="../Images/DC-Images/Comics/second.jpg" alt="" width="400px">
+                <!-- <img src="../Images/DC-Images/Comics/third.jpg" alt="" width="400px"> -->
+                <img src="../Images/DC-Images/Comics/fourth.jpg" alt="" width="400px">
+                <img src="../Images/DC-Images/Comics/fifth.jpg" alt="" width="400px">
+                <img src="../Images/DC-Images/Comics/sixth.jpg" alt="" width="400px">
+                <img src="../Images/DC-Images/Comics/seventh.jpg" alt="" width="400px">
+                <img src="../Images/DC-Images/Comics/eight.jpg" alt="" width="400px">
+                <img src="../Images/DC-Images/Comics/ninth.jpg" alt="" width="400px">
+                <img src="../Images/DC-Images/Comics/tenth.jpg" alt="" width="400px">
+              </marquee>
+
+            </div>
+        </div>
+        <div class="empty">
+            <!-- <img src="../Images/DC-Images/batman-png-cool-batman-png.png" alt="" width="500px"> -->
+        </div>
+    </div>
+    <div class="foot">
+      <img src="../Images/DC-Images/batman-png-cool-batman-png.png" alt="" width="400px">
+      <footer>
+          <div class="first-list">
+              <h1>MENU</h1>
+          <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="#">image gallery</a></li>
+              <li><a href="#">video gallery</a></li>
+              <li><a href="#">bio</a></li>
+              <li><a href="#">quiz game</a></li>
+          </ul>
+      </div>
+      <div class="second-list">
+          <h1>DC</h1>
+      <ul>
+          <li><a href="#">dc official website</a></li>
+          <li><a href="#">dc universe infinite</a></li>
+          <li><a href="#">dc kids</a></li>
+          <li><a href="#">dc shop</a></li>
+          <li><a href="#">terms of use</a></li>
+          <li><a href="#">ad choices</a></li>
+          <li><a href="#">ratings</a></li>
+          <li><a href="#">shop help</a></li>
+      </ul>
+      </div>
+
+      <div class="address">
+          <h1>Address</h1>
+          <address>
+              Wayne manor,<br>1007 Mountain Drive<br> Gotham
+          </address>
+      </div>
+      </footer>
+
+  </div>
+  <div class="reserved-copyrights">
+      All right reserved &copy;  
+      <a href="mailto:kambojaryankamboj@gmail.com">AryanKamboj</a> 
+         and    
+          <a href="mailto:">kartikgarg</a>
+  </div>
+    
+</body>
+</html>

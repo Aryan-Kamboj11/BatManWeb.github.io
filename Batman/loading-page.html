@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <style>
+         .load-overlay{
+             height:100%;
+             width: 100%;
+             position: fixed;
+             /* border: 20px solid black; */
+             background: rgba(26, 26, 26, 0.7);
+             z-index: 5;
+             top: 0;
+         }
+         .preloader{
+             display: none;
+             top: 50%;
+             left: 50%;
+             transform: translate(20%,20%);
+             z-index: 7;
+         }
+         .preloader img{
+             animation: animate 2s ease-in-out infinite;
+             width: 900px;
+             z-index: 10;
+         }
+         @keyframes animate {
+             /* 0%{
+                 filter: hue-rotate(0deg);
+             } */
+             25%{
+                 filter: invert(25%);
+             }
+             50%{
+                 filter: invert(50%);
+             }
+             75%{
+                 filter: invert(75%);
+             }
+             100%{
+                 filter: invert(100%);
+             }           
+         }
+
+    </style>
+   
+
+</head>
+<body>
+    <div class='load-overlay' id='Overlay'>
+            <div class='preloader' id='preload'>
+                <img src='../Images/Batman-new-Logo2-removebg-preview.png' alt='' style='filter: invert(100%);'>
+            </div>
+    </div>
+    
+</body>
+</html>

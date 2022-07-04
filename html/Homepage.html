@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+    <title>Marvel and DC</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Londrina Outline', cursive;
+            font-size: 2.4rem;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #Marvel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('Images/Spidey-1.png')no-repeat;
+            /* background-color: maroon; */
+            background-size: 100%;
+        }
+
+        #DC {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('Images/Bat-image1.png') no-repeat;
+            background-size: 100%;
+        }
+
+        h1 a {
+            /* font-size: 2.4rem; */
+            text-decoration: none;
+            color: white;
+            transition: all 1s;
+        }
+
+        #Marvel h1 a:hover {
+            padding: 320px 242px 320px 258px;
+            background: rgba(219, 3, 3, 0.35);
+        }
+
+        #DC h1 a:hover {
+            padding: 320px 328px 320px 328px;
+            background: rgba(0, 0, 0, 0.35);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="Marvel">
+            <h1> <a href=""> MARVEL</a></h1>
+        </div>
+        <div id="DC">
+            <h1><a href="index.html">DC</a></h1>
+        </div>
+    </div>
+</body>
+
+</html>

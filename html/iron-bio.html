@@ -1,0 +1,317 @@
+<html>
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .bio-h {
+            color: rgba(29, 21, 21, 0.712);
+            margin-left: 85px;
+        }
+        
+        .bio-head {
+            background-color: honeydew;
+            opacity: 0.75;
+            width: 400px;
+            color: black;
+            margin-top: 60px;
+            margin-left: 700px;
+        }
+        
+        .bio {
+            transform: translateY(-60px);
+            top: 0;
+            position: relative;
+            background: url('i16.jpg')center center/cover no-repeat;
+            left: 0;
+            width: 100%;
+            height: 800px;
+        }
+        /* ul {
+            display: flex;
+        }
+        
+        header ul li a {
+            padding: 10px 25px;
+            text-decoration: none;
+        } */
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: rgba(218, 35, 35, 0.884);
+        }
+        
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: #770000;
+            color: white;
+        }
+        
+        .slideshow-container {
+            height: 800px;
+            /* margin: 25px; */
+            /* padding: 35px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url('ironman4.jpg')center center/cover no-repeat;
+            /* transform: translateY(-60px); */
+        }
+        
+        .slideshow-container h1 {
+            color: #fff;
+            font-weight: 700;
+            padding: 0px 20px 10px 20px;
+            margin: 0px 10px 15px 10px;
+        }
+        
+        .footer footer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transform: translateX(-350px);
+        }
+        
+        .footer {
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background: url('ironman12.jpg')center center/cover no-repeat;
+        }
+        
+        .first-list h1 {
+            color: #fff;
+            padding: 10px;
+            margin: 2px;
+        }
+        
+        .first-list ul li {
+            list-style-type: none;
+        }
+        
+        .first-list ul li a {
+            text-decoration: none;
+            padding: 8px 10px;
+            margin: 2px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #959595;
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .first-list ul li a:hover {
+            color: #000095;
+        }
+        
+        .footer .address address {
+            color: #959595;
+            transform: translate(200px, 100px);
+        }
+        
+        .copyright {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(25, 25, 25, 0.75);
+            color: #959595;
+        }
+        
+        .copyright a {
+            text-decoration: none;
+            color: #959595;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="topnav">
+        <a href="iron-home.html">HOME</a>
+        <a class="active" href="iron-bio.html">BIO</a>
+        <a href="photo-gallery.html">PHOTO GALLERY</a>
+        <a href="video-gallery-iron.html">VIDEO GALLERY</a>
+        <a href="#quiz">QUIZ</a>
+    </div>
+
+
+
+    <div class="bio">
+
+        <div class="bio-head">
+            <h1 class="bio-h">TONY STARK</h1>
+            <h3 class="bio-h">IRON MAN</h3>
+        </div>
+
+        <img src="i18.jpg" style="margin-left: 700px;width: 400px;">
+
+        <div class="bio-head">
+            <h2 class="bio-h">Information</h2>
+        </div>
+
+        <table class="bio-head">
+            <tr>
+                <td>Publisher</td>
+                <td>Marvel Comics</td>
+            </tr>
+            br
+            <tr>
+                <td>Created by</td>
+                <td>stanlee</td>
+            </tr>
+
+            <tr>
+                <td>Played by</td>
+                <td>Robert Downey Jr.</td>
+            </tr>
+
+            <tr>
+                <td>Number of movies:</td>
+                <td>3</td>
+            </tr>
+
+            <tr>
+                <td>Produced by</td>
+                <td>Marvel Cinematic Universe</td>
+            </tr>
+
+            <tr>
+                <td>Character Name</td>
+                <td>Tony Stark</td>
+            </tr>
+
+            <tr>
+                <td>Alter Ego</td>
+                <td>Edward Anthony Stark</td>
+            </tr>
+
+            <tr>
+                <td>Place of origin</td>
+                <td>Long Island , New York</td>
+            </tr>
+            <br>
+            <br>
+
+            <tr>
+                <td>Abilities</td>
+                <td>
+                    <ul>
+                        <li>Genius Level Intellect</li>
+                        <li>Proficient Scientist and engineer</li>
+
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Power of suit</td>
+                <td>Superhuman Strength, speed, durability, agility, reflexes, senses</td>
+            </tr>
+
+
+
+        </table>
+
+    </div>
+
+    <div class="slideshow-container">
+        <h1>MOVIES</h1>
+        <div class="slideshow">
+            <marquee behaviour="alternate" direction="left">
+
+                <!-- <img src="im1.jpg" alt=""> -->
+                <img src="im2.jpg" alt="">
+                <img src="im3.jpg" alt="">
+                <img src="im4.jpg" alt="">
+                <img src="im5.jpg" alt="">
+                <img src="im6.jpg" alt="">
+                <img src="im7.jpg" alt="">
+                <img src="im8.jpg" alt="">
+            </marquee>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <div class="first-list">
+                <h1>MENU</h1>
+                <ul>
+                    <li><a href="iron-home.html">HOME</a></li>
+                    <li><a href="iron-bio.html">BIO</a></li>
+                    <li><a href="photo-gallery.html">PHOTO GALLERY</a></li>
+                    <li><a href="#">VIDEO GALLERY</a></li>
+                    <li><a href="#">QUIZ</a></li>
+                </ul>
+            </div>
+
+            <div class="first-list">
+                <h1>MARVEL</h1>
+                <ul>
+                    <li>
+                        <a href="#">DOCTOR STRANGE</a>
+                    </li>
+                    <li>
+                        <a href="#">BLACK WIDOW</a>
+                    </li>
+                    <li>
+                        <a href="#">SPIDERMAN</a>
+                    </li>
+                    <li>
+                        <a href="#">HAWKEYE</a>
+                    </li>
+                    <li>
+                        <a href="#">HULK</a>
+                    </li>
+                    <li>
+                        <a href="#">CAPTAIN AMERICA</a>
+                    </li>
+                    <li>
+                        <a href="#">SCARLET WITCH</a>
+                    </li>
+                    <li>
+                        <a href="#">WINTER SOLDIER</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="address">
+                <address>
+                    Tony Stark, Stark Tower,<br> New york city , Midtown Manhattan
+                </address>
+            </div>
+        </footer>
+    </div>
+
+    <div class="copyright">
+        All rights reserved to &copy;<a href="mailto:kartikgupta1269@gmail.com">Kartik garg</a>
+    </div>
+</body>
+
+</html>

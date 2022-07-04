@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRON MAN</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: rgba(218, 35, 35, 0.884);
+        }
+        
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: #770000;
+            color: white;
+        }
+        
+        .container {
+            background: url('ironman11.jpg')center center/cover no-repeat;
+            height: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .container-bio {
+            margin: 8px 20px;
+            padding: 8px 13px;
+        }
+        
+        .container-bio h1,
+        .stark-tower h1 {
+            font-size: 5.2rem;
+            color: #fff;
+            font-family: 'Bebas Neue', cursive;
+        }
+        
+        .container-bio h3,
+        .stark-tower h3 {
+            font-size: 1.3rem;
+            transform: translateY(20px);
+            color: #fff;
+            font-family: 'Bebas Neue', cursive;
+        }
+        
+        .characterfacts ul li,
+        .stark-tower ul li {
+            list-style-type: none;
+            padding: 8px 12px;
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            font-weight: 600;
+        }
+        
+        .image-container img {
+            transform: translate(30px, 100px);
+        }
+        
+        .stark-container {
+            position: relative;
+            width: 100%;
+            height: 800px;
+            top: 0;
+            left: 0;
+            background: url('ironman13.webp')center center/cover no-repeat;
+        }
+        
+        .stark-container::before {
+            content: "";
+            position: absolute;
+            height: 800px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .tower-image img {
+            width: 650px;
+            transform: translateX(100px);
+            border-radius: 10px;
+            box-shadow: 2px 1px 5px 4px lightslategrey;
+        }
+        
+        .tower {
+            position: absolute;
+            transform: translateY(-720px);
+            left: 0px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .footer footer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transform: translateX(-350px);
+        }
+        
+        .footer {
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background: url('ironman12.jpg')center center/cover no-repeat;
+        }
+        
+        .first-list h1 {
+            color: #fff;
+            padding: 10px;
+            margin: 2px;
+        }
+        
+        .first-list ul li {
+            list-style-type: none;
+        }
+        
+        .first-list ul li a {
+            text-decoration: none;
+            padding: 8px 10px;
+            margin: 2px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #959595;
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .first-list ul li a:hover {
+            color: #000095;
+        }
+        
+        .footer .address address {
+            color: #959595;
+            transform: translate(200px, 100px);
+        }
+        
+        .copyright {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(25, 25, 25, 0.75);
+            color: #959595;
+        }
+        
+        .copyright a {
+            text-decoration: none;
+            color: #959595;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="iron.html">HOME</a>
+        <a href="iron-bio.html">BIO</a>
+        <a href="#contact">PHOTO GALLERY</a>
+        <a href="#">VIDEO GALLERY</a>
+        <a href="ironman-quiz.html">QUIZ</a>
+    </div>
+
+    <div class="container">
+
+        <div class="container-bio">
+            <h3>CHARACTER FACTS</h3>
+            <h1>IRONMAN</h1>
+            <div class="characterfacts">
+                <ul>
+                    <li>Power: Immense wealth, advanced technology</li>
+                    <li>First appearence: tales of suspense #39 (1963)</li>
+                    <li>Location: New york city</li>
+                    <li>Occupation: CEO of stark industries</li>
+                    <li>Real Name: Edward Anthony Stark</li>
+                </ul>
+            </div>
+        </div>
+        <div class="image-container">
+            <img width="600px" src="iron-home3.png">
+        </div>
+
+
+    </div>
+
+    <div class="slidshow"></div>
+
+    <div class="stark-container"></div>
+
+    <div class="tower">
+
+        <div class="stark-tower">
+            <h3>FEATURES</h3>
+            <h1>STARK TOWER</h1>
+
+            <ul>
+                <li>Location: New york, Midtown Manhattan</li>
+                <li>Owner: Tony Stark</li>
+                <li>Height: 1130 Feet</li>
+                <li>Number of floors: Three</li>
+                <li>Built in year: 2012</li>
+                <li>Includes:
+                    <ul>
+                        <li>Lounge Areas</li>
+                        <li>Three Laboratories</li>
+                        <li>Machine room</li>
+                        <li>Gym</li>
+                        <li>Relactation area</li>
+                        <li>Locker</li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="tower-image">
+            <img src="ironman14.webp">
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <div class="first-list">
+                <h1>MENU</h1>
+                <ul>
+                    <li><a href="iron-home.html">HOME</a></li>
+                    <li><a href="iron-bio.html">BIO</a></li>
+                    <li><a href="photo-gallery.html">PHOTO GALLERY</a></li>
+                    <li><a href="video-gallery-iron.html">VIDEO GALLERY</a></li>
+                    <li><a href="#">QUIZ</a></li>
+                </ul>
+            </div>
+
+            <div class="first-list">
+                <h1>MARVEL</h1>
+                <ul>
+                    <li>
+                        <a href="#">DOCTOR STRANGE</a>
+                    </li>
+                    <li>
+                        <a href="#">BLACK WIDOW</a>
+                    </li>
+                    <li>
+                        <a href="#">SPIDERMAN</a>
+                    </li>
+                    <li>
+                        <a href="#">HAWKEYE</a>
+                    </li>
+                    <li>
+                        <a href="#">HULK</a>
+                    </li>
+                    <li>
+                        <a href="#">CAPTAIN AMERICA</a>
+                    </li>
+                    <li>
+                        <a href="#">SCARLET WITCH</a>
+                    </li>
+                    <li>
+                        <a href="#">WINTER SOLDIER</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="address">
+                <address>
+                    Tony Stark, Stark Tower,<br> New york city , Midtown Manhattan
+                </address>
+            </div>
+        </footer>
+    </div>
+
+    <div class="copyright">
+        All rights reserved to &copy;<a href="mailto:kartikgupta1269@gmail.com">Kartik garg</a>
+    </div>
+
+
+</body>
+
+</html>
+
+</html>
